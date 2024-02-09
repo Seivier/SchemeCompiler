@@ -1,0 +1,9 @@
+NAME: Runtime Error: Tuple operators shouldn't access outside a tuple
+DESCRIPTION: Raise a runtime because 4 is bigger than the size of the tuple
+STATUS:RT error
+SRC:
+(let (t (tup 1 2 3 4))
+  (set t 4 true)
+)
+EXPECTED:
+Index out of bounds: Tried to access index 4 of (tup 1 2 3 4)

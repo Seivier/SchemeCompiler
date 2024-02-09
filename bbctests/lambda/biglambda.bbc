@@ -1,0 +1,10 @@
+NAME: Lambda should be able to have big arity.
+DESCRIPTION: Lambda with arity of 8.
+SRC:
+(let (x 10000)
+(let (f ( lambda (x1 x2 x3 x4 x5 x6 x7 x8) 
+        (+ x1 (+ x2 (+ x3 (+ x4 (+ x5 (+ x6 (+ x7 (+ x8 x)))))))))) 
+    (@ f 1 2 3 4 5 6 7 10))
+)
+EXPECTED:
+10038

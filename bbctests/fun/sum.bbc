@@ -1,0 +1,9 @@
+NAME: Sum recursive function test
+DESCRIPTION: Returns sum of naturals until n
+SRC:
+(
+    (def (sum x) (if (<= x 0) 0 (+ x (sum (sub1 x)))))
+    (sum 10)
+)
+EXPECTED:
+55

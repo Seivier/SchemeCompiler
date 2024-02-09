@@ -1,0 +1,6 @@
+NAME: i-esim tuple element can be getted
+DESCRIPTION: basic get
+SRC:
+(get (tup 1 true 2 (tup 2 3) 5) 3)
+EXPECTED:
+(tup 2 3)

@@ -1,0 +1,7 @@
+NAME: Runtime Error: @ operator can only be applied to closures.
+DESCRIPTION: Raise a runtime because 1 is not a closure.
+STATUS:RT error
+SRC:
+(@ 1 true)
+EXPECTED:
+Type error: Expected closure but got 1

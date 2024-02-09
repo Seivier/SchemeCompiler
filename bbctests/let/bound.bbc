@@ -1,0 +1,6 @@
+NAME: let expression that tests anf boundness
+DESCRIPTION: expression that loses boundness when going through normal anf
+SRC:
+(+ (let (x 1) x) (let (x 2) x))
+EXPECTED:
+3

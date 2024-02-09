@@ -1,0 +1,13 @@
+NAME: A function can return a new tuple
+DESCRIPTION: Complex function that creates a tuple
+SRC:
+(
+    (def (even x) (if (= x 0) true (odd (sub1 x))))
+    (def (odd x) (if (= x 0) false (even (sub1 x))))
+    (def (f n) (if (even n) (+ n 3) (+ n -3)))
+    (def (g x) (tup (f x) (f (add1 x)) (f (+ x 2)) (let (y 20) (if (odd x) y (+ y x)))))
+    (get (print (g 14)) 3)
+)
+EXPECTED:
+> (tup 17 12 19 34)
+34

@@ -1,0 +1,10 @@
+NAME: Big function test
+DESCRIPTION: Many args and fun call
+SRC:
+(
+    (def (g x) x)
+    (def (f a b c d e f g) (+ (+ a (+ b c)) (+ (+ d e) (+ f (g g)))))
+    (f 1 2 3 4 5 6 7)
+)
+EXPECTED:
+28

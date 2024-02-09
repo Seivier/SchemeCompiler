@@ -1,0 +1,12 @@
+NAME: A lambda should be able to be defined with free variables out of its closure scope.
+DESCRIPTION: ApplyToFive class example.
+SRC:
+(let (five 5) 
+    (let (applyToFive (lambda (it) (@ it 5)))
+        (let (incr (lambda (x) (+ x 1)) )
+            (@ applyToFive incr) 
+        ) 
+    )
+)
+EXPECTED:
+6

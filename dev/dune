@@ -1,0 +1,4 @@
+(library
+ (name dev)
+ (modules ast asm anf parse interp utils compile error cast)
+ (libraries containers))

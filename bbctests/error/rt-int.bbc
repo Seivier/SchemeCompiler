@@ -1,0 +1,7 @@
+NAME: Runtime Error: Integer operators shouldn't work with booleans
+DESCRIPTION: Raise a runtime because true is not a number
+STATUS:RT error
+SRC:
+(+ 20 true)
+EXPECTED:
+Type error: Expected integer but got true

@@ -1,0 +1,12 @@
+NAME: No GC tuple test with small heap
+DESCRIPTION: Tuples out of scope in reduced heap runs out of memory with no GC.
+PARAMS: USE_GC=0, HEAP_SIZE=16
+STATUS:RT error
+SRC:
+( 
+    (def (g x) (let (t (tup 1 2 3 4 5 6 7 8 9 10)) 
+        (+ 1 2)))  
+    (+ (g 1) (get (tup 1 2 3 4 5) 0))
+)
+EXPECTED:
+out of memory

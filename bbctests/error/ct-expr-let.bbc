@@ -1,0 +1,10 @@
+NAME: Compile Error: Invalide expr in let
+DESCRIPTION: Test for a compile error in the parse of a let
+STATUS: CT error
+SRC:
+(let (x 1)
+  (let (y )
+    (+ x y)))
+
+EXPECTED:
+Dev.Parse.CTError("Not a valid let assignment: (y)")

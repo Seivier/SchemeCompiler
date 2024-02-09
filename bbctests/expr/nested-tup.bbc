@@ -1,0 +1,6 @@
+NAME: A tuple can be instantiated with anything as an element
+DESCRIPTION: evaluates a tuple with nested tuples
+SRC:
+(tup 1 (tup 2 3) false (tup (tup (tup) 1) 200) true)
+EXPECTED:
+(tup 1 (tup 2 3) false (tup (tup (tup) 1) 200) true)

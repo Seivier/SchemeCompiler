@@ -1,0 +1,7 @@
+NAME: Compile Error: Invalid expression
+DESCRIPTION: Test for a compile error in parser
+STATUS: CT error
+SRC:
+(and )
+EXPECTED:
+Failure("Identifier not found: and")

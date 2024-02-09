@@ -1,0 +1,10 @@
+NAME: Function scope test
+DESCRIPTION: Correct scope of variables in fun body
+SRC:
+(
+    (def (f x) (+ x x))
+    (def (g x) (+ (let (x 1) x) (let (y 2) (+ (f x) y)) ))
+    (g 3)
+)
+EXPECTED:
+9

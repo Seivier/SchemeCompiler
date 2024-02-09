@@ -1,0 +1,7 @@
+NAME: Runtime Error: Boolean operators should only be applied to boolean values
+DESCRIPTION: Raise a runtime because 1 is not a boolean value
+STATUS:RT error
+SRC:
+(and 1 false)
+EXPECTED:
+Type error: Expected boolean but got 1

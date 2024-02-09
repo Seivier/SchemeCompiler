@@ -1,0 +1,9 @@
+NAME: An external function with more than 6 arguments can be called
+DESCRIPTION: Proper call to a C function that needs to pass arguments on the stack
+SRC:
+(
+  (defsys long_fun bool int bool int bool int bool int -> int)
+  (long_fun true 10 false 4 true 31 false 4)
+)
+EXPECTED:
+41

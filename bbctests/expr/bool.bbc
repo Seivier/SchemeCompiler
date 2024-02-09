@@ -1,0 +1,6 @@
+NAME: A boolean
+DESCRIPTION: evaluates a boolean
+SRC:
+true
+EXPECTED:
+true

@@ -1,0 +1,6 @@
+NAME: And should be lazy evaluated 
+DESCRIPTION: Do an and operation with false and a number, shouldn't fail
+SRC:
+(and false 1)
+EXPECTED:
+false

@@ -1,0 +1,6 @@
+NAME: Numbers can be compare to check if they are equals
+DESCRIPTION: Equal operator in two integers
+SRC:
+(= (+ 3 10) 13)
+EXPECTED:
+true

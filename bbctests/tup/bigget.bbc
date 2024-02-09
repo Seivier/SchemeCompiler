@@ -1,0 +1,12 @@
+NAME: Tuple get should be compatible with functions and other operations
+DESCRIPTION: Compound tuple get expression.
+SRC:
+(get
+  (if
+    (<= 0 1)
+    (tup (print false) -3 42)
+    (tup true false 7))
+  (+ 1 1))
+EXPECTED:
+> false
+42

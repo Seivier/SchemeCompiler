@@ -1,0 +1,6 @@
+NAME: Test for not
+DESCRIPTION: negates a boolean
+SRC:
+(not (not true))
+EXPECTED:
+true

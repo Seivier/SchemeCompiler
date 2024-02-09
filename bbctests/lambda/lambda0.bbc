@@ -1,0 +1,10 @@
+NAME: Lambda with no parameters.
+DESCRIPTION: Lambda with no parameters
+SRC:
+(
+    (let (f (lambda () (+ 1 2)))
+        (@ f)
+    )
+)
+EXPECTED:
+3

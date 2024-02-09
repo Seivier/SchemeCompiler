@@ -1,0 +1,11 @@
+NAME: GC tuple test with small heap
+DESCRIPTION: GC cleans tuples out of scope in reduced heap
+PARAMS: USE_GC=1, HEAP_SIZE=16
+SRC:
+( 
+    (def (g x) (let (t (tup 1 2 3 4 5 6 7 8 9 10)) 
+        (+ 1 2)))  
+    (+ (g 1) (get (tup 1 2 3 4 5) 0))
+)
+EXPECTED:
+4

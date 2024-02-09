@@ -1,0 +1,12 @@
+NAME: Mutual recursive fun
+DESCRIPTION: Returns fibonacci of n
+SRC:
+(
+    (def (even x) (if (= x 0) true (odd (sub1 x))))
+    (def (odd x) (if (= x 0) false (even (sub1 x))))
+    (and (print (even 10)) (print (odd 10)))
+)
+EXPECTED:
+> true
+> false
+false

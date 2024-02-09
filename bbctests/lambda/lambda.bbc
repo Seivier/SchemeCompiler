@@ -1,0 +1,6 @@
+NAME: A lambda should return a closure.
+DESCRIPTION: Basic lambda init
+SRC:
+(tup (lambda () true) (lambda (x y) (+ x y)))
+EXPECTED:
+(tup <clos:0> <clos:2>)

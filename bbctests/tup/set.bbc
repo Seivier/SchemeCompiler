@@ -1,0 +1,6 @@
+NAME: i-esim tuple element can be setted
+DESCRIPTION: basic set
+SRC:
+(set (tup 2 true) 1 12)
+EXPECTED:
+(tup 2 12)

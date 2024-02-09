@@ -1,0 +1,8 @@
+NAME: Letrec should be make multiple defs.
+DESCRIPTION: Letrec with no lambdas.
+SRC:
+(letrec
+  ()
+  (+ 1 2))
+EXPECTED:
+3

@@ -1,0 +1,6 @@
+NAME: Negative integer can be evaluated
+DESCRIPTION: Operation that result in negative number
+SRC:
+(+ 20 -30)
+EXPECTED:
+-10

@@ -1,0 +1,9 @@
+NAME: Runtime Error: Tuple operators shouldn't work without a tuple
+DESCRIPTION: Raise a runtime because 10 its not a tuple
+STATUS:RT error
+SRC:
+(let (t (tup 1 2 3 4))
+  (get 10 2)
+)
+EXPECTED:
+Type error: Expected tuple but got 10

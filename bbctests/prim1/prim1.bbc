@@ -1,0 +1,6 @@
+NAME: Unitary operations
+DESCRIPTION: Test a serie of unitary operations
+SRC:
+(sub1 (add1 (add1 42)))
+EXPECTED:
+43

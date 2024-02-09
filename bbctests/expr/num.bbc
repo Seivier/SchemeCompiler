@@ -1,0 +1,6 @@
+NAME: A number
+DESCRIPTION: evaluates a number
+SRC:
+20
+EXPECTED:
+20

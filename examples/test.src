@@ -1,0 +1,2 @@
+(let (gf (lambda (x) (lambda (y) (+ x y))))
+   (+ (@ (@ gf 3) 10) (@ (@ gf 40) 1)))

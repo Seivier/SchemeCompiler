@@ -1,0 +1,10 @@
+NAME: Runtime Error: Wrong return from C call
+DESCRIPTION: Proper call, but wrong return value in a C function
+STATUS:RT error
+SRC:
+(
+  (defsys max int int -> int)
+  (print (and true (max 1 (+ 4 6))))
+)
+EXPECTED:
+Type error: Expected boolean but got 10

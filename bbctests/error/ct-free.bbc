@@ -1,0 +1,8 @@
+NAME: Compile Error: free identifier
+DESCRIPTION: Test for a error if a free identifier is used
+STATUS: CT error
+SRC:
+(let (x 1)
+  (+ x y))
+EXPECTED:
+Failure("Identifier not found: y")

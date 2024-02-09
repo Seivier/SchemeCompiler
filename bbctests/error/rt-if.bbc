@@ -1,0 +1,7 @@
+NAME: Runtime Error: Conditional shouldn't work with numbers
+DESCRIPTION: Raise a runtime because 0 is not a boolean
+STATUS:RT error
+SRC:
+(if 0 true false)
+EXPECTED:
+Type error: Expected boolean but got 0

@@ -1,0 +1,11 @@
+NAME: letrec should be able to define recursive lambda functions.
+DESCRIPTION: Crazy recursion.
+PARAMS: USE_GC=1, HEAP_SIZE=512
+SRC:
+(letrec 
+((sum1 (lambda (n) (if (= n 0) (tup) (tup n (@ sum2 (+ n -1))))))
+(sum2 (lambda (n) (if (= n 0) (tup) (tup (+ n -1) (@ sum1 (+ n -1)))))))
+(@ sum1 100)
+)
+EXPECTED:
+(tup 100 (tup 98 (tup 98 (tup 96 (tup 96 (tup 94 (tup 94 (tup 92 (tup 92 (tup 90 (tup 90 (tup 88 (tup 88 (tup 86 (tup 86 (tup 84 (tup 84 (tup 82 (tup 82 (tup 80 (tup 80 (tup 78 (tup 78 (tup 76 (tup 76 (tup 74 (tup 74 (tup 72 (tup 72 (tup 70 (tup 70 (tup 68 (tup 68 (tup 66 (tup 66 (tup 64 (tup 64 (tup 62 (tup 62 (tup 60 (tup 60 (tup 58 (tup 58 (tup 56 (tup 56 (tup 54 (tup 54 (tup 52 (tup 52 (tup 50 (tup 50 (tup 48 (tup 48 (tup 46 (tup 46 (tup 44 (tup 44 (tup 42 (tup 42 (tup 40 (tup 40 (tup 38 (tup 38 (tup 36 (tup 36 (tup 34 (tup 34 (tup 32 (tup 32 (tup 30 (tup 30 (tup 28 (tup 28 (tup 26 (tup 26 (tup 24 (tup 24 (tup 22 (tup 22 (tup 20 (tup 20 (tup 18 (tup 18 (tup 16 (tup 16 (tup 14 (tup 14 (tup 12 (tup 12 (tup 10 (tup 10 (tup 8 (tup 8 (tup 6 (tup 6 (tup 4 (tup 4 (tup 2 (tup 2 (tup 0 (tup)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))

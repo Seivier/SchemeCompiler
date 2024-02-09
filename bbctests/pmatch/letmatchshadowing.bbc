@@ -1,0 +1,12 @@
+NAME: Tuple matching should respect shadowing
+DESCRIPTION: Nested let bindings with tuple matching
+SRC:
+(
+    (def (f t)
+    (let (x 100) 
+    (let ((tup x y z) t)
+        (+ (+ x y) z))))
+    (f (tup 2 3 5))
+)
+EXPECTED:
+10

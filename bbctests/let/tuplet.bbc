@@ -1,0 +1,7 @@
+NAME: Tuples should be able to be locally defined
+DESCRIPTION: Let tuple expression.
+SRC:
+(let (t (tup (tup) true 42))
+  t)
+EXPECTED:
+(tup (tup) true 42)

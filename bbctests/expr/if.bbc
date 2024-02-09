@@ -1,0 +1,14 @@
+NAME: A nested if expression
+DESCRIPTION: 5 nested if expressions
+SRC:
+(if (and (<= 1 10) (<= -4 4)) 
+  (if true 
+    (if (not true) 
+      2
+      (if (and false true) 
+        3
+        (if true 1 4)))
+    5)
+  6)
+EXPECTED:
+1

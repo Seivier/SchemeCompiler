@@ -1,0 +1,9 @@
+NAME: A let expression
+DESCRIPTION: complex let expression
+SRC:
+(let (x 10) 
+  (let (y 1)
+    (let (z 3)
+      (+ (+ y z) x))))
+EXPECTED:
+14

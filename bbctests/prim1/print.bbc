@@ -1,0 +1,8 @@
+NAME: You can print the value of any type
+DESCRIPTION: Prints both a bool and a number
+SRC:
+(print (<= (print (+ 2 3)) 3))
+EXPECTED:
+> 5
+> false
+false

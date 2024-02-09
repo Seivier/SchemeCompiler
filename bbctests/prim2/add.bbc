@@ -1,0 +1,6 @@
+NAME: An addition binary operation
+DESCRIPTION: Sums 5 numbers
+SRC:
+(+ (+ (+ 2 3) (+ -10 4)) 7)
+EXPECTED:
+6

@@ -1,0 +1,9 @@
+NAME: Fibonacci recursive
+DESCRIPTION: Returns fibonacci of n
+SRC:
+(
+    (def (fib x) (if (<= x 0) 1 (if (<= x 1) 1 (+ x (fib (sub1 x))))))
+    (fib 10)
+)
+EXPECTED:
+55

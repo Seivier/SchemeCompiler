@@ -1,0 +1,6 @@
+NAME: A lambda should be applyable.
+DESCRIPTION: Basic lambda apply
+SRC:
+(@ (lambda (x y) (+ x y)) 1 2)
+EXPECTED:
+3

@@ -1,0 +1,7 @@
+NAME: Runtime Error: Argument arity should match closure's.
+DESCRIPTION: Raise a runtime because 2 arguments are being applied to a closure with arity of 1.
+STATUS:RT error
+SRC:
+(@ (lambda (x y) (+ y x)) 4)
+EXPECTED:
+Arity mismatch: closure expected 2 arguments but got 1

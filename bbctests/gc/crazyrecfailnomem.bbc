@@ -1,0 +1,12 @@
+NAME: No GC and should raise out of memory error because sum1 and sum2 create many tups in heap.
+DESCRIPTION: Crazy recursion no mem fail because of heap size.
+PARAMS: USE_GC=0, HEAP_SIZE=128, STACK_SIZE=0x800000
+STATUS:RT error
+SRC:
+(letrec 
+((sum1 (lambda (n) (if (= n 0) (tup) (tup n (@ sum2 (+ n -1))))))
+(sum2 (lambda (n) (if (= n 0) (tup) (tup (+ n -1) (@ sum1 (+ n -1)))))))
+(@ sum1 100)
+)
+EXPECTED:
+out of memory

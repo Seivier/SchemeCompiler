@@ -1,0 +1,10 @@
+NAME: Let from the notes 
+DESCRIPTION: let expression from the let-binding notes (https://users.dcc.uchile.cl/~etanter/CC5116/lec_let-and-stack_notes.html)
+SRC:
+(let (a 10)                   
+  (let (c (let (b (add1 a))    
+           (let (d (add1 b))   
+            (add1 b))))       
+   (add1 c)))                  
+EXPECTED:
+13

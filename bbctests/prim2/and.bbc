@@ -1,0 +1,6 @@
+NAME: An and binary operation
+DESCRIPTION: Operate 5 booleans
+SRC:
+(and (and true true) (and false (and true false)))
+EXPECTED:
+false

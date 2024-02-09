@@ -1,0 +1,8 @@
+NAME: GC lambda test with small heap
+DESCRIPTION: GC cleans lambdas out of scope in reduced heap
+PARAMS: USE_GC=1, HEAP_SIZE=8
+SRC:
+(let (gf (lambda (x) (lambda (y) (+ x y))))
+   (+ (@ (@ gf 3) 10) (@ (@ gf 40) 1)))
+EXPECTED:
+54

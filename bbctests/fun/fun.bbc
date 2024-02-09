@@ -1,0 +1,10 @@
+NAME: Base function test
+DESCRIPTION: Function call inside fun body
+SRC:
+(
+    (def (g x) (if (<= x 5) 5 x))
+    (def (f x y) (+ (+ 2 x) (g y)))
+    (f 5 3)
+)
+EXPECTED:
+12

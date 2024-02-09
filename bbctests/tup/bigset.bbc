@@ -1,0 +1,13 @@
+NAME: Tuple set should be compatible with functions and other operations
+DESCRIPTION: Compound tuple set expression.
+SRC:
+(get
+  (set
+    (tup (print false) -3 42)
+    (+ -1 1)
+    (print true))
+  0)
+EXPECTED:
+> false
+> true
+true

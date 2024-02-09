@@ -1,0 +1,6 @@
+NAME: The scope of a variable should be the closest
+DESCRIPTION: Expression with same identifier, the closest one should be used
+SRC:
+(let (x 10) (let (x 20) (+ x x)))
+EXPECTED:
+40

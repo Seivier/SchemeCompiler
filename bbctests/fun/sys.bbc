@@ -1,0 +1,10 @@
+NAME: An external function can be called if declared
+DESCRIPTION: Proper call to a C function
+SRC:
+(
+  (defsys max int int -> int)
+  (print (+ 2 (max 5 (+ 4 6))))
+)
+EXPECTED:
+> 12
+12

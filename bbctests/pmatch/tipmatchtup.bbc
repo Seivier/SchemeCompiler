@@ -1,0 +1,12 @@
+NAME: Tuple matching should be able to mutate tuple
+DESCRIPTION: Tuple mutation from tuple matching
+SRC:
+(
+    (def (f t)
+    (let (t1 (tup 4 2)) 
+    (let ((tup x y z) t)
+        (set t1 1 (+ (+ x y) z)))))
+    (f (tup 7 7 6))
+)
+EXPECTED:
+(tup 4 20)

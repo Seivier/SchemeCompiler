@@ -1,0 +1,6 @@
+NAME: A empty tuple can be instantiated
+DESCRIPTION: evaluates a tuple with no elements
+SRC:
+(tup)
+EXPECTED:
+(tup)

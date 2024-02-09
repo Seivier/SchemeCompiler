@@ -1,0 +1,9 @@
+NAME: No GC lambda test with small heap
+DESCRIPTION: Lambdas out of scope in reduced heap runs out of memory with no GC.
+PARAMS: USE_GC=0, HEAP_SIZE=8
+STATUS:RT error
+SRC:
+(let (gf (lambda (x) (lambda (y) (+ x y))))
+   (+ (@ (@ gf 3) 10) (@ (@ gf 40) 1)))
+EXPECTED:
+out of memory
